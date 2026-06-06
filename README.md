@@ -6,7 +6,7 @@ This repository contains the reproducibility artifacts for the technical report:
 and Pareto Trade-offs**
 
 ```text
-Version: arXiv v1 / draft-v5-derived artifact packet
+Artifact release: technical-report companion repository
 Base model family: Qwen3
 Shared SFT reference: r004
 Main DPO/control runs: r028, r029, s3d001, s3d002
@@ -42,7 +42,7 @@ from aggregate and sanitized files.
   exact evaluator/parser notes where recoverable from local artifacts.
 - License, data access, redistribution, reference verification, and claim-scope
   documentation.
-- Release-readiness notes for the report-linked artifact packet.
+- Release-readiness notes for the report-linked artifact repository.
 - Verification scripts for artifact integrity, release hygiene, tables, figures,
   and overlap checks.
 

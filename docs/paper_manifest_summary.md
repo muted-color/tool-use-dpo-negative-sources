@@ -2,7 +2,7 @@
 
 Use this table as the paper-ready summary of the finalized repository manifest.
 Values here are derived from released artifacts and manifest files in this
-repository, not from historical draft snapshots.
+repository.
 
 | Evaluation surface | Role | Source/split/snapshot | n | Evaluator/parser | Metric definition | Seed/decoding | Released artifact path |
 |---|---|---|---:|---|---|---|---|

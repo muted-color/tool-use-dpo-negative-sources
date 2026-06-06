@@ -30,7 +30,7 @@ python scripts/compute_grouped_bootstrap.py --bootstrap-iterations 1000
 
 ## Release Boundary
 
-The public artifact packet includes aggregate results, sanitized per-example
+The public artifact repository includes aggregate results, sanitized per-example
 metrics, hashes, manifests, and reproduction scripts. It excludes raw benchmark
 prompts, raw generated outputs, full DPO pair files, private audit materials,
 credentials, and model/adapter weights.

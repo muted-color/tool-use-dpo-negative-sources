@@ -26,9 +26,9 @@
       "sha256": "d4ca98e9488ef19af80485c2152abbba6f88d98c9d6d13768bc914701affafd5"
     },
     {
-      "bytes": 6197,
+      "bytes": 6204,
       "path": "README.md",
-      "sha256": "43765b0f547e6fcfc0b9ee6ff030002a4b29c87d19e40742cedc3dc1fee4adf8"
+      "sha256": "f9a9766e8c08d8529b4525a0df5522ca80c545ec0aac1db8c3ea761ea86bf6d7"
     },
     {
       "bytes": 623,
@@ -231,9 +231,9 @@
       "sha256": "c4ddbaf825d5470c64c11e839d83344ca20b0e752a49a99206bf4a0d629e2ac9"
     },
     {
-      "bytes": 4470,
+      "bytes": 4433,
       "path": "docs/paper_manifest_summary.md",
-      "sha256": "22b4a677e0153fa8e5fe1f290bc8179daf45ff3b5165d76ca85d258e898f8f54"
+      "sha256": "ce61922f36143abfb5e1fdb3ef32d6109c328371a8f67bb7fae5f366878081fb"
     },
     {
       "bytes": 3032,
@@ -246,9 +246,9 @@
       "sha256": "6aac04ea253e5de014373b3b8f0e2adbcaa65b7b564b65fd10a671914bd9acfb"
     },
     {
-      "bytes": 1529,
+      "bytes": 1533,
       "path": "docs/release_readiness.md",
-      "sha256": "693d299de2ee4851a62a4cdcb679c0f5f36af6b4205f0746d86f80904063fbf5"
+      "sha256": "b83ff0d0d80e8b82af7dbbc6f324f2c504929093c0e7211997355ddb93cbcc7f"
     },
     {
       "bytes": 2140,
