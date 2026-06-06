@@ -1,0 +1,36 @@
+{
+  "baseline": {
+    "run_id": "r004",
+    "model_family": "Qwen3",
+    "role": "shared SFT target and DPO reference"
+  },
+  "dpo_budget": {
+    "pair_budget_per_recipe": 3000,
+    "optimizer_steps": 375,
+    "effective_batch_size": 8,
+    "beta": 0.1,
+    "learning_rate": 0.000005,
+    "lora_rank": 16,
+    "reporting_checkpoints": ["step50", "final"]
+  },
+  "primary_metrics": [
+    "BFCL_core_accuracy",
+    "When2Call_behavior_accuracy",
+    "When2Call_macro_F1"
+  ],
+  "guardrail_metrics": [
+    "ifeval_style.prompt_level_strict_accuracy",
+    "ifeval_style.instruction_level_accuracy",
+    "functionchat_bench.function_name_accuracy",
+    "strict_parse_success"
+  ],
+  "interpretation": {
+    "fixed_budget": "fixed pair count, optimizer-step budget, DPO recipe, reference checkpoint, and reporting protocol",
+    "not_claimed": [
+      "equal-token causal control",
+      "intrinsic source superiority",
+      "universal clean-filtering superiority"
+    ]
+  }
+}
+

@@ -1,0 +1,272 @@
+manifest_status: finalized_from_local_artifacts
+source_of_truth_artifacts:
+  eval_slice_manifest: experiments/exp_02_stage1_target_sft_pilot/artifacts/runs/r002/eval_slice_manifest.jsonl
+  dataset_snapshot: experiments/exp_02_stage1_target_sft_pilot/artifacts/runs/r002/dataset_snapshot.json
+  category_distribution: experiments/exp_02_stage1_target_sft_pilot/artifacts/runs/r002/category_distribution.csv
+  stage3d_eval_wrapper: experiments/exp_07_stage3d_high_confidence_clean_dpo_main/code/stage3d_eval.py
+  underlying_primary_evaluator: experiments/exp_02_stage1_target_sft_pilot/code/stage1_candidate_eval.py
+  underlying_secondary_evaluator: experiments/exp_02_stage1_target_sft_pilot/code/stage1_secondary_eval.py
+
+common_eval:
+  raw_prompts_written: false
+  full_generated_outputs_written: false
+  public_release_mode: aggregate_and_sanitized_eval_outputs
+  decoding:
+    do_sample: false
+    enable_thinking: false
+    deterministic_seed: deterministic_decoding_where_benchmark_permits; no separate eval sampling seed is recoverable from current artifacts
+  stage3d_command_template: >-
+    python experiments/exp_07_stage3d_high_confidence_clean_dpo_main/code/stage3d_eval.py
+    --run-id <r028|r029|s3d001|s3d002>
+    --adapter-name <checkpoint_step_0050|dpo_best_adapter>
+    --tasks all
+  stage3d_eval_defaults:
+    primary_batch_size: 4
+    secondary_batch_size: 8
+    ifeval_batch_size: 2
+    primary_max_new_tokens: 192
+    functionchat_max_new_tokens: 128
+    ifeval_max_new_tokens: 384
+
+bfcl:
+  evaluation_surface: BFCL
+  role: primary structural function-calling axis
+  source_repo: gorilla-llm/Berkeley-Function-Calling-Leaderboard
+  source_revision: 61fc0608cfd831fcfbbaa676ebdfef0ed963eeda
+  split_or_slice: eval_core hash manifest
+  subset_files:
+    simple: BFCL_v3_simple.json first 60 rows
+    multiple: BFCL_v3_multiple.json first 60 rows
+    parallel: BFCL_v3_parallel.json first 60 rows
+    relevance: BFCL_v3_irrelevance.json first 60 rows
+    live_multiple: BFCL_v3_live_multiple.json first 60 rows
+  n: 300
+  category_counts:
+    simple: 60
+    multiple: 60
+    parallel: 60
+    relevance: 60
+    live_multiple: 60
+  evaluator_path: experiments/exp_02_stage1_target_sft_pilot/code/stage1_candidate_eval.py
+  stage3d_wrapper_path: experiments/exp_07_stage3d_high_confidence_clean_dpo_main/code/stage3d_eval.py
+  parser_policy: qwen3_tool_call_parser_stage0_policy
+  parser_modes:
+    strict:
+      - strict_tool_call_block
+      - strict_full_json
+    permissive:
+      - permissive_json_substring
+    failure:
+      - missing_parseable_tool_call
+      - json_without_tool_call_shape
+      - substring_json_without_tool_call_shape
+      - tool_call_json_decode_error
+  parser_failure_handling: parser failures produce no valid calls; strict_parse_success is false unless parse_mode is strict_tool_call_block or strict_full_json; tool-call exact_match requires parsed/scored calls
+  metric_definition: BFCL_core_accuracy is exact_match over the 300 BFCL rows; category accuracy is exact_match within each BFCL category
+  released_artifacts:
+    per_example_pattern: results/per_example/primary/*_<checkpoint>.csv rows with task=bfcl
+    aggregate_metrics: results/aggregate/main_metrics_absolute.csv and results/aggregate/main_metrics_delta_vs_sft.csv
+
+when2call:
+  evaluation_surface: When2Call
+  role: primary call-decision axis
+  source_repo: nvidia/When2Call
+  source_revision: 0582f7749df63a96fdc3070932e83e72396ace53
+  dataset_config: test
+  split: mcq
+  split_or_slice: eval_core hash manifest
+  n: 300
+  category_counts:
+    tool_call: 100
+    follow_up: 100
+    unable: 100
+    direct_answer: 0
+  label_mapping:
+    tool_call: tool_call
+    direct: direct_answer
+    cannot_answer: unable
+    request_for_info: follow_up
+  evaluator_path: experiments/exp_02_stage1_target_sft_pilot/code/stage1_candidate_eval.py
+  stage3d_wrapper_path: experiments/exp_07_stage3d_high_confidence_clean_dpo_main/code/stage3d_eval.py
+  parser_policy: qwen3_tool_call_parser_stage0_policy
+  behavior_classifier: parsed calls imply tool_call; otherwise generated text is classified as unable, follow_up, or direct_answer by deterministic string heuristics in stage1_candidate_eval.py
+  metric_definition:
+    behavior_accuracy: exact_match over the 300 When2Call rows
+    macro_f1: frozen evaluator macro F1 over tool_call, follow_up, unable, direct_answer; direct_answer is a zero-support evaluator class because the frozen eval slice has 0 direct_answer gold rows
+    zero_division: 0
+    labels:
+      - tool_call
+      - follow_up
+      - unable
+      - direct_answer
+    gold_support:
+      tool_call: 100
+      follow_up: 100
+      unable: 100
+      direct_answer: 0
+  released_artifacts:
+    per_example_pattern: results/per_example/primary/*_<checkpoint>.csv rows with task=when2call
+    aggregate_metrics: results/aggregate/main_metrics_absolute.csv and results/aggregate/main_metrics_delta_vs_sft.csv
+
+sft_dev_auxiliary:
+  evaluation_surface: SFT-dev auxiliary diagnostics
+  role: auxiliary primary diagnostics and bootstrap universe member
+  source_revision: frozen Stage1 SFT development split from local Stage1 artifacts
+  split_or_slice: sft_dev
+  n: 500
+  category_counts:
+    tool_call: 351
+    direct_answer: 93
+    follow_up: 30
+    unable: 26
+  evaluator_path: experiments/exp_02_stage1_target_sft_pilot/code/stage1_candidate_eval.py
+  stage3d_wrapper_path: experiments/exp_07_stage3d_high_confidence_clean_dpo_main/code/stage3d_eval.py
+  metric_definition:
+    strict_parse_success: strict parser success on SFT-dev tool-call examples
+    tool_call_accuracy_on_sft_dev: exact function and required-argument correctness on expected tool-call examples
+    behavior_accuracy_on_sft_dev: expected behavior class accuracy over the 500 SFT-dev rows
+    nontrivial_error_rate: nontrivial error diagnostic over BFCL and When2Call primary rows
+  released_artifacts:
+    per_example_pattern: results/per_example/primary/*_<checkpoint>.csv rows with task=sft_dev
+    aggregate_metrics: results/aggregate/main_metrics_absolute.csv and results/aggregate/main_metrics_delta_vs_sft.csv
+
+ifeval_style:
+  evaluation_surface: IFEval-style
+  role: instruction-following guardrail axis
+  source_repo: google/IFEval
+  source_revision: 966cd89545d6b6acfd7638bc708b98261ca58e84
+  source_file: ifeval_input_data.jsonl
+  split_or_slice: regression, first 100 raw rows from source file; 96 prompt-level rows have at least one supported instruction
+  raw_n: 100
+  eval_prompt_n: 96
+  category_counts:
+    raw_instruction_following_prompts: 100
+    evaluable_prompt_level_prompts: 96
+    zero_supported_prompts: 4
+  evaluator_path: experiments/exp_02_stage1_target_sft_pilot/code/stage1_secondary_eval.py
+  stage3d_wrapper_path: experiments/exp_07_stage3d_high_confidence_clean_dpo_main/code/stage3d_eval.py
+  metric_definition:
+    prompt_level_strict_accuracy: fraction of evaluable prompts where all supported instructions passed; zero-supported prompts are excluded from the denominator
+    instruction_level_accuracy: passed supported instructions divided by supported instructions
+  released_artifacts:
+    per_example_pattern: results/per_example/ifeval/*_<checkpoint>.csv
+    aggregate_metrics: results/aggregate/main_metrics_absolute.csv and results/aggregate/main_metrics_delta_vs_sft.csv
+
+functionchat_bench:
+  evaluation_surface: FunctionChat-Bench
+  role: secondary transfer diagnostic
+  source_repo: kakao/FunctionChat-Bench
+  source_revision: 5ddb0b5bb37d6423e1f3381ef693cda811a7847e
+  exact_commit_sha: 5ddb0b5bb37d6423e1f3381ef693cda811a7847e
+  nearest_available_source: https://raw.githubusercontent.com/kakao/FunctionChat-Bench/main/data/
+  verification_evidence: "Local eval_slice_manifest FunctionChat canonical row hashes match 100/100 rows for this commit."
+  split_or_slice:
+    singlecall: FunctionChat-Singlecall.jsonl first 25 rows
+    dialog: FunctionChat-Dialog.jsonl first 45 rows
+    call_decision: FunctionChat-CallDecision.jsonl first 30 rows
+  n: 100
+  category_counts:
+    singlecall: 25
+    dialog: 45
+    call_decision: 30
+  evaluator_path: experiments/exp_02_stage1_target_sft_pilot/code/stage1_secondary_eval.py
+  stage3d_wrapper_path: experiments/exp_07_stage3d_high_confidence_clean_dpo_main/code/stage3d_eval.py
+  metric_definition:
+    function_name_accuracy: deterministic evaluator exactness for function name
+    argument_accuracy: deterministic evaluator argument accuracy
+    output_type_accuracy: deterministic output-type match
+    tool_hallucination_rate: deterministic hallucinated-tool diagnostic
+  released_artifacts:
+    per_example_pattern: results/per_example/functionchat/*_<checkpoint>.csv
+    aggregate_metrics: results/aggregate/main_metrics_absolute.csv and results/aggregate/main_metrics_delta_vs_sft.csv
+
+bootstrap:
+  source_artifact: artifacts/stage4/bootstrap/pairwise_bootstrap_ci.csv
+  recompute_command: python scripts/compute_grouped_bootstrap.py --bootstrap-iterations 1000
+  unit: prompt_id
+  iterations: 1000
+  ci_type: percentile
+  seed_rule: 20260603 + comparison_metric_index * 97
+  uncertainty_scope: evaluation-sample uncertainty only
+  excludes:
+    - training-seed variance
+    - DPO stochasticity
+    - data-sampling variance across independently reconstructed pools
+
+llm_audit:
+  human_annotations: false
+  stage3d_clean_pool_gates:
+    scope: holdout quality-control gates for active clean DPO sources
+    final_judge: external_gpt55_high_calibration
+    model: gpt-5_5-2026-04-23
+    recorded_model_alias_in_raw_labels: gpt-5.5
+    query_date_utc: not_recorded_in_public_artifact
+    reasoning_effort: high
+    response_format: json_object
+    max_completion_tokens: 4096
+    temperature: not_explicitly_set_by_client
+    prompt_template_versions:
+      holdout: stage3d_clean_holdout_v1
+      rescue_adjudication: stage3d_clean_rescue_adjudication_v1
+    prompt_template_artifact: not_redistributed_in_public_artifact
+    input_packet_fields:
+      - audit_item_id
+      - judge_track
+      - expected_behavior
+      - dialog_history
+      - user_query
+      - tools
+      - chosen_output
+      - rejected_output
+      - judge_prompt_version
+    response_schema:
+      required_keys:
+        - audit_item_id
+        - audit_accept
+        - rejected_tool_schema_valid
+        - rejected_incorrect
+        - primary_error
+        - taxonomy
+        - confidence
+        - rationale_short
+    adjudication_rule_artifact: docs/audit_rubric.md
+    gate_requirements:
+      minimum_rows_per_source: 100
+      minimum_accept_rate: 0.95
+      maximum_chosen_reference_suspect_rate: 0.01
+      maximum_repeated_reject_taxonomy_bucket_rate: 0.03
+    audited_runs:
+      r026:
+        source: noised_gold
+        holdout_rows: 100
+        status: passed
+      r027b:
+        source: behavior
+        holdout_rows: 100
+        status: passed
+      r027:
+        source: behavior
+        holdout_rows: 100
+        status: failed_chosen_reference_suspect_gate_not_used_for_dpo
+  stage3b_matched_diagnostic_audit:
+    scope: matched source-risk diagnostic only, not downstream matched-DPO evidence
+    local_screening_judge:
+      judge_id: local_gptoss120b
+      model: ggml-org/gpt-oss-120b-GGUF
+      temperature: 0
+      response_format: json_object
+      max_tokens: 4096
+      label_count: 300
+    final_judge:
+      judge_id: external_gpt55_high_full
+      model: gpt-5_5-2026-04-23
+      recorded_model_alias_in_raw_labels: gpt-5.5
+      reasoning_effort: high
+      response_format: json_object
+      max_completion_tokens: 4096
+      temperature: not_explicitly_set_by_client
+      label_count: 300
+    local_gptoss_vs_final_agreement: 0.9166666666666666
+    validator_final_agreement: 0.7566666666666667
+    mini_dpo_independent_audit_gate_pass: false
+    prompt_artifact: experiments/exp_05_stage3b_matched_source_diagnostic/artifacts/runs/r017m/judge_prompt.md

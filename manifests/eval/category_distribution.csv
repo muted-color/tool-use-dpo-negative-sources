@@ -1,0 +1,13 @@
+split,benchmark,category,count
+eval_core,BFCL,live_multiple,60
+eval_core,BFCL,multiple,60
+eval_core,BFCL,parallel,60
+eval_core,BFCL,relevance,60
+eval_core,BFCL,simple,60
+eval_core,When2Call,follow_up,100
+eval_core,When2Call,tool_call,100
+eval_core,When2Call,unable,100
+eval_ood,FunctionChat-Bench,call_decision,30
+eval_ood,FunctionChat-Bench,dialog,45
+eval_ood,FunctionChat-Bench,singlecall,25
+regression,IFEval,instruction_following,100

@@ -1,0 +1,10 @@
+run_id,source,matched_prompt_count,strict_parse_success,valid_wrong_rate,schema_validity,mean_severity,notes
+r016,noised_gold,436,1.0,1.0,1.0,2.0,prompt-macro diagnostic when available
+r016,self,436,0.9947247706422019,0.9965596330275229,0.9965596330275229,2.0,prompt-macro diagnostic when available
+r016,weak_model,436,0.9635839886413281,0.7231405635648754,0.7231405635648754,2.0060206422018347,prompt-macro diagnostic when available
+r017b,noised_gold,1000,1.0,1.0,1.0,2.0,prompt-macro diagnostic when available
+r017b,self,1000,0.991,0.999,0.999,2.0,prompt-macro diagnostic when available
+r017b,weak_model,1000,0.973,0.834,0.834,2.013,prompt-macro diagnostic when available
+r017j,noised_gold,1000,1.0,0.9,,,repaired 1k strict numeric gate
+r017j,self,1000,0.991,0.9,,,repaired 1k strict numeric gate
+r017j,weak_model,1000,0.988,0.9,,,repaired 1k strict numeric gate

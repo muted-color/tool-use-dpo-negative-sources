@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+
+# Local environments and secrets
+.env
+.env.*
+!.env.example
+*.key
+*secret*
+*private*
+runpod/
+
+# Raw or non-public experiment outputs
+pairs_*.jsonl
+*_eval_details*.jsonl
+*_functionchat_details*.jsonl
+*_ifeval_details*.jsonl
+*.safetensors
+adapter_model.*
+checkpoint*/
+dpo_*_adapter/
+full_sft_*_adapter/
+
+# Generated reproduction outputs
+reproduced/
+

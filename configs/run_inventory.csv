@@ -1,0 +1,7 @@
+run_id,source,cleanliness,preferred_checkpoint,pairs,steps,role
+r004,SFT baseline,none,SFT best,0,0,reference baseline
+r028,noised_gold,clean,step50,3000,375,structural negative main condition
+r029,behavior,clean,step50,3000,375,behavior negative main condition
+s3d001,noised_gold,unfiltered,step50,3000,375,same-budget structural control
+s3d002,behavior,unfiltered,step50,3000,375,same-budget behavior control
+

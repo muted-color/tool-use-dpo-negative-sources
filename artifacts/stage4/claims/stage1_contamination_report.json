@@ -1,0 +1,29 @@
+{
+  "payload": {
+    "checks": {
+      "combined_user_query_tool_schema_hash": {
+        "overlap_count": 0,
+        "sample_overlap_hashes": []
+      },
+      "namespaced_prompt_id": {
+        "overlap_count": 0,
+        "sample_overlap_hashes": []
+      },
+      "normalized_tool_schema_hash": {
+        "overlap_count": 0,
+        "sample_overlap_hashes": []
+      },
+      "normalized_user_utterance_hash": {
+        "overlap_count": 0,
+        "sample_overlap_hashes": []
+      }
+    },
+    "eval_manifest": "experiments/exp_02_stage1_target_sft_pilot/artifacts/runs/r002/eval_slice_manifest.jsonl",
+    "note": "Hash-only check. Any nonzero overlap requires manual review before candidate training.",
+    "sft_manifest": "experiments/exp_02_stage1_target_sft_pilot/artifacts/runs/r002/sft_split_manifest.jsonl",
+    "status": "pass"
+  },
+  "report_kind": "stage1_sft_eval_contamination",
+  "source_artifact": "experiments/exp_02_stage1_target_sft_pilot/artifacts/runs/r002/contamination_report.json",
+  "source_sha256": "d52317b344b95dbc7276f9268e102f438f43fd8411afeb419367e879373a39a9"
+}

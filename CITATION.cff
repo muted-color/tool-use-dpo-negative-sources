@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "A Fixed-Budget Empirical Study of Tool-Use DPO: Negative Sources, Checkpoints, and Pareto Trade-offs"
+message: "If you use these artifacts, please cite the accompanying technical report."
+type: dataset
+authors:
+  - family-names: Ahn
+    given-names: Ilho
+    email: ilho@cj.net
+date-released: 2026-06-05
+license: MIT
+keywords:
+  - tool use
+  - direct preference optimization
+  - reproducibility
+  - function calling
+  - Pareto frontier

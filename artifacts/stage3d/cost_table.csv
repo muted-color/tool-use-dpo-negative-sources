@@ -1,0 +1,9 @@
+run_id,claim_name,adapter_label,budget_role,pair_count,unique_prompt_count,steps,effective_batch_size,train_wall_clock_seconds,runpod_elapsed_seconds,peak_gpu_memory_gb,dpo_forward_tokens_seen,loss_bearing_tokens_seen,padded_tokens_seen,primary_eval_seconds,secondary_eval_seconds
+r028,noised_gold_clean_3k,final,train_plus_full_eval,3000,3000,375,8,2293.234,4312,36.212,2539695,293415,4001060,874.735,959.806
+r028,noised_gold_clean_3k,step50,eval_only_existing_checkpoint,3000,3000,50,8,,1746,21.708,,,,806.708,842.017
+r029,behavior_clean_3k_from_r027b,final,train_plus_full_eval,3000,3000,375,8,2434.316,4235,41.479,2707917,141865,4411976,712.689,819.448
+r029,behavior_clean_3k_from_r027b,step50,eval_only_existing_checkpoint,3000,3000,50,8,,1790,21.725,,,,816.432,851.908
+s3d001,noised_gold_unfiltered_3k_control,final,train_plus_full_eval,3000,3000,375,8,2286.968,4382,36.885,2575820,289724,4038276,791.016,849.024
+s3d001,noised_gold_unfiltered_3k_control,step50,eval_only_existing_checkpoint,3000,3000,50,8,,1706,21.708,,,,791.313,808.689
+s3d002,behavior_unfiltered_3k_control,final,train_plus_full_eval,3000,3000,375,8,2627.374,4844,41.457,2695849,138593,4358840,820.199,866.247
+s3d002,behavior_unfiltered_3k_control,step50,eval_only_existing_checkpoint,3000,3000,50,8,,1914,21.708,,,,880.84,808.718

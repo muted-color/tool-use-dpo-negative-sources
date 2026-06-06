@@ -1,0 +1,11 @@
+Python: project scripts require Python >= 3.10
+Main training stack used during experimentation:
+- PyTorch CUDA stack
+- Transformers
+- PEFT
+- bitsandbytes
+- QLoRA DPO training
+GPU noted in project environment: NVIDIA GB10 / CUDA-capable UMA setup
+
+Artifact-level reproduction does not require a GPU.
+

@@ -1,0 +1,57 @@
+scope,source_artifact,status,check_key,overlap_count,notes
+stage1_sft_vs_eval,artifacts/stage4/claims/stage1_contamination_report.json,pass,combined_user_query_tool_schema_hash,0,hash-only Stage1 SFT/eval overlap check
+stage1_sft_vs_eval,artifacts/stage4/claims/stage1_contamination_report.json,pass,namespaced_prompt_id,0,hash-only Stage1 SFT/eval overlap check
+stage1_sft_vs_eval,artifacts/stage4/claims/stage1_contamination_report.json,pass,normalized_tool_schema_hash,0,hash-only Stage1 SFT/eval overlap check
+stage1_sft_vs_eval,artifacts/stage4/claims/stage1_contamination_report.json,pass,normalized_user_utterance_hash,0,hash-only Stage1 SFT/eval overlap check
+stage2_prompt_pool_after_filtering,artifacts/stage4/claims/stage2_contamination_report.json,pass,combined_user_query_tool_schema_hash,0,hash-only Stage2 accepted prompt-pool overlap check after filtering
+stage2_prompt_pool_after_filtering,artifacts/stage4/claims/stage2_contamination_report.json,pass,normalized_tool_schema_hash,0,hash-only Stage2 accepted prompt-pool overlap check after filtering
+stage2_prompt_pool_after_filtering,artifacts/stage4/claims/stage2_contamination_report.json,pass,normalized_user_utterance_hash,0,hash-only Stage2 accepted prompt-pool overlap check after filtering
+stage2_prompt_pool_after_filtering,artifacts/stage4/claims/stage2_contamination_report.json,pass,prompt_id,0,hash-only Stage2 accepted prompt-pool overlap check after filtering
+stage3d_train_pool:r028:eval_slice,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,namespaced_prompt_id,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r028:eval_slice,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_user_utterance_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r028:eval_slice,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r028:eval_slice,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,combined_user_query_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r028:sft_dev,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,namespaced_prompt_id,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r028:sft_dev,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_user_utterance_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r028:sft_dev,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r028:sft_dev,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,combined_user_query_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r028:sft_manifest_all,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,namespaced_prompt_id,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r028:sft_manifest_all,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_user_utterance_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r028:sft_manifest_all,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r028:sft_manifest_all,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,combined_user_query_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r029:eval_slice,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,namespaced_prompt_id,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r029:eval_slice,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_user_utterance_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r029:eval_slice,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r029:eval_slice,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,combined_user_query_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r029:sft_dev,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,namespaced_prompt_id,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r029:sft_dev,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_user_utterance_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r029:sft_dev,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r029:sft_dev,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,combined_user_query_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r029:sft_manifest_all,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,namespaced_prompt_id,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r029:sft_manifest_all,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_user_utterance_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r029:sft_manifest_all,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:r029:sft_manifest_all,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,combined_user_query_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d001:eval_slice,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,namespaced_prompt_id,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d001:eval_slice,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_user_utterance_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d001:eval_slice,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d001:eval_slice,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,combined_user_query_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d001:sft_dev,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,namespaced_prompt_id,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d001:sft_dev,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_user_utterance_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d001:sft_dev,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d001:sft_dev,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,combined_user_query_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d001:sft_manifest_all,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,namespaced_prompt_id,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d001:sft_manifest_all,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_user_utterance_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d001:sft_manifest_all,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d001:sft_manifest_all,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,combined_user_query_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d002:eval_slice,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,namespaced_prompt_id,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d002:eval_slice,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_user_utterance_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d002:eval_slice,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d002:eval_slice,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,combined_user_query_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d002:sft_dev,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,namespaced_prompt_id,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d002:sft_dev,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_user_utterance_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d002:sft_dev,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d002:sft_dev,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,combined_user_query_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d002:sft_manifest_all,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,namespaced_prompt_id,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d002:sft_manifest_all,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_user_utterance_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d002:sft_manifest_all,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,normalized_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check
+stage3d_train_pool:s3d002:sft_manifest_all,artifacts/stage4/claims/stage3d_train_pool_overlap_report.json,pass,combined_user_query_tool_schema_hash,0,hash-only final Stage3d selected train-pool overlap check

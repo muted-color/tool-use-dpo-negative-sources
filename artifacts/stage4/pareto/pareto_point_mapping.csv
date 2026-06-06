@@ -1,0 +1,9 @@
+point_id,run_id,cleanliness,source,checkpoint
+A,r028,clean,noised_gold,step50
+B,r028,clean,noised_gold,final
+C,r029,clean,behavior,step50
+D,r029,clean,behavior,final
+E,s3d001,unfiltered,noised_gold,step50
+F,s3d001,unfiltered,noised_gold,final
+G,s3d002,unfiltered,behavior,step50
+H,s3d002,unfiltered,behavior,final

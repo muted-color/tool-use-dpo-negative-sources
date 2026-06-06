@@ -1,0 +1,310 @@
+{
+  "hash_keys": [
+    "namespaced_prompt_id",
+    "normalized_user_utterance_hash",
+    "normalized_tool_schema_hash",
+    "combined_user_query_tool_schema_hash"
+  ],
+  "note": "Hash-only overlap check. Raw prompts, tool schemas, completions, and full DPO pairs are not redistributed.",
+  "report_kind": "stage3d_train_pool_overlap",
+  "runs": {
+    "r028": {
+      "checks": {
+        "eval_slice": {
+          "combined_user_query_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 800
+          },
+          "namespaced_prompt_id": {
+            "overlap_count": 0,
+            "target_rows": 800
+          },
+          "normalized_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 800
+          },
+          "normalized_user_utterance_hash": {
+            "overlap_count": 0,
+            "target_rows": 800
+          }
+        },
+        "sft_dev": {
+          "combined_user_query_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 500
+          },
+          "namespaced_prompt_id": {
+            "overlap_count": 0,
+            "target_rows": 500
+          },
+          "normalized_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 500
+          },
+          "normalized_user_utterance_hash": {
+            "overlap_count": 0,
+            "target_rows": 500
+          }
+        },
+        "sft_manifest_all": {
+          "combined_user_query_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 5500
+          },
+          "namespaced_prompt_id": {
+            "overlap_count": 0,
+            "target_rows": 5500
+          },
+          "normalized_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 5500
+          },
+          "normalized_user_utterance_hash": {
+            "overlap_count": 0,
+            "target_rows": 5500
+          }
+        }
+      },
+      "pair_count": 3000,
+      "pair_path": "experiments/exp_07_stage3d_high_confidence_clean_dpo_main/artifacts/runs/r026/pairs_noised_gold_clean_3k.jsonl",
+      "pair_sha256": "1bf5fff1921cf2b29dbb3b651c39157e7890f9ddc50e39a988f3533afc3663ea",
+      "unique_counts": {
+        "combined_user_query_tool_schema_hash": 3000,
+        "namespaced_prompt_id": 3000,
+        "normalized_tool_schema_hash": 2434,
+        "normalized_user_utterance_hash": 2993
+      }
+    },
+    "r029": {
+      "checks": {
+        "eval_slice": {
+          "combined_user_query_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 800
+          },
+          "namespaced_prompt_id": {
+            "overlap_count": 0,
+            "target_rows": 800
+          },
+          "normalized_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 800
+          },
+          "normalized_user_utterance_hash": {
+            "overlap_count": 0,
+            "target_rows": 800
+          }
+        },
+        "sft_dev": {
+          "combined_user_query_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 500
+          },
+          "namespaced_prompt_id": {
+            "overlap_count": 0,
+            "target_rows": 500
+          },
+          "normalized_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 500
+          },
+          "normalized_user_utterance_hash": {
+            "overlap_count": 0,
+            "target_rows": 500
+          }
+        },
+        "sft_manifest_all": {
+          "combined_user_query_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 5500
+          },
+          "namespaced_prompt_id": {
+            "overlap_count": 0,
+            "target_rows": 5500
+          },
+          "normalized_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 5500
+          },
+          "normalized_user_utterance_hash": {
+            "overlap_count": 0,
+            "target_rows": 5500
+          }
+        }
+      },
+      "pair_count": 3000,
+      "pair_path": "experiments/exp_07_stage3d_high_confidence_clean_dpo_main/artifacts/runs/r027b/pairs_behavior_clean_3k.jsonl",
+      "pair_sha256": "b487de2b39380460a36d6fdc522c3ab5c9ab61757a7f198d1d4be7d5e7a69d7c",
+      "unique_counts": {
+        "combined_user_query_tool_schema_hash": 3000,
+        "namespaced_prompt_id": 3000,
+        "normalized_tool_schema_hash": 2361,
+        "normalized_user_utterance_hash": 2926
+      }
+    },
+    "s3d001": {
+      "checks": {
+        "eval_slice": {
+          "combined_user_query_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 800
+          },
+          "namespaced_prompt_id": {
+            "overlap_count": 0,
+            "target_rows": 800
+          },
+          "normalized_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 800
+          },
+          "normalized_user_utterance_hash": {
+            "overlap_count": 0,
+            "target_rows": 800
+          }
+        },
+        "sft_dev": {
+          "combined_user_query_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 500
+          },
+          "namespaced_prompt_id": {
+            "overlap_count": 0,
+            "target_rows": 500
+          },
+          "normalized_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 500
+          },
+          "normalized_user_utterance_hash": {
+            "overlap_count": 0,
+            "target_rows": 500
+          }
+        },
+        "sft_manifest_all": {
+          "combined_user_query_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 5500
+          },
+          "namespaced_prompt_id": {
+            "overlap_count": 0,
+            "target_rows": 5500
+          },
+          "normalized_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 5500
+          },
+          "normalized_user_utterance_hash": {
+            "overlap_count": 0,
+            "target_rows": 5500
+          }
+        }
+      },
+      "pair_count": 3000,
+      "pair_path": "experiments/exp_07_stage3d_high_confidence_clean_dpo_main/artifacts/runs/s3d001/pairs_noised_gold_unfiltered_3k.jsonl",
+      "pair_sha256": "2d6ccfc99d93fada21dabe70f96ee4e92b9242aa7f0d0ff974d674a62e7a4e1b",
+      "unique_counts": {
+        "combined_user_query_tool_schema_hash": 3000,
+        "namespaced_prompt_id": 3000,
+        "normalized_tool_schema_hash": 2465,
+        "normalized_user_utterance_hash": 2988
+      }
+    },
+    "s3d002": {
+      "checks": {
+        "eval_slice": {
+          "combined_user_query_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 800
+          },
+          "namespaced_prompt_id": {
+            "overlap_count": 0,
+            "target_rows": 800
+          },
+          "normalized_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 800
+          },
+          "normalized_user_utterance_hash": {
+            "overlap_count": 0,
+            "target_rows": 800
+          }
+        },
+        "sft_dev": {
+          "combined_user_query_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 500
+          },
+          "namespaced_prompt_id": {
+            "overlap_count": 0,
+            "target_rows": 500
+          },
+          "normalized_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 500
+          },
+          "normalized_user_utterance_hash": {
+            "overlap_count": 0,
+            "target_rows": 500
+          }
+        },
+        "sft_manifest_all": {
+          "combined_user_query_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 5500
+          },
+          "namespaced_prompt_id": {
+            "overlap_count": 0,
+            "target_rows": 5500
+          },
+          "normalized_tool_schema_hash": {
+            "overlap_count": 0,
+            "target_rows": 5500
+          },
+          "normalized_user_utterance_hash": {
+            "overlap_count": 0,
+            "target_rows": 5500
+          }
+        }
+      },
+      "pair_count": 3000,
+      "pair_path": "experiments/exp_07_stage3d_high_confidence_clean_dpo_main/artifacts/runs/s3d002/pairs_behavior_unfiltered_3k.jsonl",
+      "pair_sha256": "d26fb951deca06a99a9250955838a9c4c461d5c8e1e9531b26d5e4ed330144c9",
+      "unique_counts": {
+        "combined_user_query_tool_schema_hash": 3000,
+        "namespaced_prompt_id": 3000,
+        "normalized_tool_schema_hash": 2389,
+        "normalized_user_utterance_hash": 2934
+      }
+    }
+  },
+  "status": "pass",
+  "targets": {
+    "eval_slice": {
+      "row_count": 800,
+      "unique_counts": {
+        "combined_user_query_tool_schema_hash": 773,
+        "namespaced_prompt_id": 800,
+        "normalized_tool_schema_hash": 460,
+        "normalized_user_utterance_hash": 671
+      }
+    },
+    "sft_dev": {
+      "row_count": 500,
+      "unique_counts": {
+        "combined_user_query_tool_schema_hash": 500,
+        "namespaced_prompt_id": 500,
+        "normalized_tool_schema_hash": 485,
+        "normalized_user_utterance_hash": 499
+      }
+    },
+    "sft_manifest_all": {
+      "row_count": 5500,
+      "unique_counts": {
+        "combined_user_query_tool_schema_hash": 5475,
+        "namespaced_prompt_id": 5500,
+        "normalized_tool_schema_hash": 4491,
+        "normalized_user_utterance_hash": 5459
+      }
+    }
+  }
+}

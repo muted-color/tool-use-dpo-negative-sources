@@ -1,0 +1,46 @@
+base_model_family: Qwen3
+sft_reference:
+  run_id: r004
+  description: shared SFT target and DPO reference
+  checkpoint_name: sft_best
+dpo_defaults:
+  beta: 0.1
+  learning_rate: 5.0e-6
+  lora_rank: 16
+  effective_batch_size: 8
+  pair_budget: 3000
+  optimizer_steps: 375
+  checkpoint_rule:
+    step50: exploratory preferred trade-off checkpoint selected after Stage3d analysis
+    final: loss-best/final DPO checkpoint
+runs:
+  - run_id: r028
+    source: noised_gold
+    cleanliness: clean
+    preferred_checkpoint: step50
+    final_checkpoint: final
+    role: structural negative main condition
+  - run_id: r029
+    source: behavior
+    cleanliness: clean
+    preferred_checkpoint: step50
+    final_checkpoint: final
+    role: behavior negative main condition
+  - run_id: s3d001
+    source: noised_gold
+    cleanliness: unfiltered
+    preferred_checkpoint: step50
+    final_checkpoint: final
+    role: same-budget structural control
+  - run_id: s3d002
+    source: behavior
+    cleanliness: unfiltered
+    preferred_checkpoint: step50
+    final_checkpoint: final
+    role: same-budget behavior control
+notes:
+  training_seed: recorded in private/full run artifacts where available
+  trainer_stack: QLoRA DPO, LoRA rank 16, PEFT/Transformers/bitsandbytes stack
+  gpu: GB10 local/RunPod CUDA environment during experimentation
+  caveat: token counts are diagnostic and not equal-token causal controls
+

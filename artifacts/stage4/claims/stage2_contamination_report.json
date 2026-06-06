@@ -1,0 +1,38 @@
+{
+  "payload": {
+    "checks_after_filtering": {
+      "combined_user_query_tool_schema_hash": 0,
+      "normalized_tool_schema_hash": 0,
+      "normalized_user_utterance_hash": 0,
+      "prompt_id": 0
+    },
+    "eval_manifest": "experiments/exp_02_stage1_target_sft_pilot/artifacts/runs/r002/eval_slice_manifest.jsonl",
+    "excluded_counts": {
+      "toolace:empty_chosen": 2,
+      "toolace:normalized_tool_schema_overlap": 141,
+      "toolace:prompt_id_overlap": 555,
+      "toolace:truncation": 13,
+      "when2call:duplicate_combined_hash": 21,
+      "when2call:normalized_tool_schema_overlap": 1165,
+      "when2call:normalized_user_utterance_overlap": 330,
+      "when2call:prompt_id_overlap": 201,
+      "when2call:truncation": 1,
+      "xlam:duplicate_combined_hash": 9,
+      "xlam:normalized_tool_schema_overlap": 6740,
+      "xlam:normalized_user_utterance_overlap": 102,
+      "xlam:prompt_id_overlap": 1180,
+      "xlam:truncation": 3
+    },
+    "sft_manifest": "experiments/exp_02_stage1_target_sft_pilot/artifacts/runs/r002/sft_split_manifest.jsonl",
+    "stage1_exclusion_counts": {
+      "combined_user_query_tool_schema_hashes": 6248,
+      "normalized_tool_schema_hashes": 4951,
+      "normalized_user_utterance_hashes": 6130,
+      "prompt_ids": 6300
+    },
+    "status": "pass"
+  },
+  "report_kind": "stage2_prompt_pool_contamination",
+  "source_artifact": "experiments/exp_03_stage2_negative_generation_pair_qa/artifacts/runs/r005/contamination_report.json",
+  "source_sha256": "e62dbddff4bacedb0b143fec7d51ac1bfef0d798c725830a007e7b8878572e1d"
+}
