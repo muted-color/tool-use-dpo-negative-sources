@@ -2,6 +2,11 @@
 
 ## Artifact-Level Reproduction
 
+This is the default public reproduction target. It verifies the reported tables,
+confidence intervals, overlap checks, and figures from aggregate and sanitized
+artifacts. It does not reconstruct raw benchmark data, regenerate full DPO pair
+files, retrain adapters, or rerun the full inference pipeline from raw prompts.
+
 ```bash
 python -m pip install -e '.[dev]'
 python scripts/verify_artifacts.py
@@ -80,12 +85,14 @@ pytest
 
 ## Full Training Path
 
-Full DPO retraining is not the default public artifact target. It requires:
+Full DPO retraining is outside the default public release scope. It requires:
 
 - access to upstream datasets and benchmarks under their own terms
+- access to restricted raw artifacts that are not redistributed here
 - a CUDA-capable GPU environment
 - Qwen3 model access from Hugging Face
 - regeneration of source-native pair pools under the documented filters
 
-The included aggregate artifacts are sufficient to reproduce the technical
-report's reported tables, bootstrap summaries, and Pareto figure inputs.
+The included aggregate and sanitized artifacts are sufficient to verify the
+technical report's reported tables, bootstrap summaries, overlap checks, and
+Pareto figure inputs.

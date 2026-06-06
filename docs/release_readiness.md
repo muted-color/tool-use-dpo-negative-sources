@@ -9,6 +9,10 @@ The repository is intended to support artifact-level reproduction of reported
 tables, confidence intervals, contamination/overlap checks, and Pareto figures.
 It is not a raw data release and does not include model or adapter weights.
 
+Full DPO retraining and raw benchmark reconstruction are outside the default
+public release scope because they require upstream dataset access, restricted
+raw artifacts, and substantial GPU resources.
+
 ## Required Public Checks
 
 Run from the repository root:
@@ -34,6 +38,9 @@ The public artifact repository includes aggregate results, sanitized per-example
 metrics, hashes, manifests, and reproduction scripts. It excludes raw benchmark
 prompts, raw generated outputs, full DPO pair files, private audit materials,
 credentials, and model/adapter weights.
+
+The repository should therefore be cited as a result-verification artifact
+repository, not as a complete end-to-end training pipeline.
 
 ## Evidence Files
 

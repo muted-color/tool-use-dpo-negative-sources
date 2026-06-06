@@ -18,6 +18,12 @@ The scope is artifact-level reproduction: verifying the report's released
 tables, bootstrap summaries, contamination/overlap checks, and Pareto figures
 from aggregate and sanitized files.
 
+Full DPO retraining and raw benchmark reconstruction are outside the default
+public release scope because they require upstream dataset access, restricted
+raw artifacts, and substantial GPU resources. The released scripts and artifacts
+are intended to verify the reported results, not to serve as an end-to-end
+training pipeline.
+
 ## Release Status
 
 | Check | Status | Command or file |
@@ -67,8 +73,9 @@ pytest
 ```
 
 The default reproducibility target is artifact-level reproduction of the report's
-numbers and figures. Full DPO retraining is documented as an optional path for
-users with the required GPU environment and upstream dataset access.
+numbers and figures. Full DPO retraining is outside the default public release
+scope and requires upstream dataset access, restricted raw artifacts, and
+substantial GPU resources.
 
 ## Repository Layout
 
@@ -144,6 +151,8 @@ are documented in `docs/data_license_table.md` and `docs/data_and_model_access.m
   iterations and percentile confidence intervals.
 - Stage3d comparisons are fixed-budget, source-native recipe comparisons. They
   should not be read as source-intrinsic causal rankings.
+- This repository verifies released results from sanitized artifacts; it is not
+  an end-to-end raw-data preprocessing, DPO training, and inference pipeline.
 - The public artifact manifest records file sizes and SHA-256 hashes in
   `configs/artifact_manifest.json`.
 - The pre-release checklist is summarized in `docs/release_readiness.md`.
