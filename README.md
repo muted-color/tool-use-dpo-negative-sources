@@ -9,14 +9,23 @@ This repository is the public verification package for the report. Its goal is
 narrow: make the report's tables, confidence intervals, overlap checks, and
 Pareto figures easy to verify from released artifacts.
 
+## At a glance
+
+- Verifies the report tables, confidence intervals, overlap checks, and Pareto
+  inputs from released artifacts.
+- Supports artifact-level reproduction only.
+- Excludes raw benchmark prompts, full DPO pair files, model weights, and
+  adapters.
+- Keeps internal trace IDs in `docs/evidence_map.md`.
+
 This is not an end-to-end training release. Full DPO retraining and raw
 benchmark reconstruction require upstream dataset access, restricted raw
 artifacts, and substantial GPU resources, so they are outside the default public
 scope.
 
-## Evidence Map
+## What This Repository Verifies
 
-| Report evidence | What to inspect | Main public path |
+| Report evidence | Purpose | Start here |
 |---|---|---|
 | Source-axis recipe profile | BFCL and When2Call deltas for clean structural vs behavior-oriented negatives | `artifacts/stage4/bootstrap/pairwise_bootstrap_ci.csv` |
 | Clean-vs-unfiltered controls | Same-budget filtering comparison | `artifacts/stage4/bootstrap/pairwise_bootstrap_ci.csv` |

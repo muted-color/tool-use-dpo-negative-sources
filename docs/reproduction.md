@@ -41,12 +41,12 @@ and figure inputs. Some supporting evidence is released as fixed summary
 artifacts because it was produced by additional audits or post-hoc runs rather
 than by the compact core table scripts.
 
-| Evidence | Public path | Reproduction status | Interpretation boundary |
+| Evidence | Public path | How to verify | Boundary |
 |---|---|---|---|
-| Mixed-source appendix ablation | `artifacts/stage5/mixed_source/` | Fixed summary artifacts | Appendix sanity check, not a replacement for the source-axis profile |
-| Training-seed stability | `artifacts/stage6/multiseed/` | Fixed summary artifacts | Fixed pair pools only; not data-sampling robustness |
-| Direct-answer coverage audit | `artifacts/stage7/direct_answer/` | Fixed summary artifacts | Coverage diagnostic only; not a matched direct-answer evaluation slice |
-| Independent pair-pool robustness | `artifacts/stage8/data_sampling/` | Fixed summary artifacts | One pool-B replicate for the two main clean conditions only |
+| Mixed-source appendix ablation | `artifacts/stage5/mixed_source/` | Review fixed summary artifacts | Appendix sanity check, not a replacement for the source-axis profile |
+| Training-seed stability | `artifacts/stage6/multiseed/` | Review fixed summary artifacts | Fixed pair pools only; not data-sampling robustness |
+| Direct-answer coverage audit | `artifacts/stage7/direct_answer/` | Review fixed summary artifacts | Coverage diagnostic only; not a matched direct-answer evaluation slice |
+| Independent pair-pool robustness | `artifacts/stage8/data_sampling/` | Review fixed summary artifacts | One pool-B replicate for the two main clean conditions only |
 
 The complete paper-facing map is in `docs/evidence_map.md`.
 

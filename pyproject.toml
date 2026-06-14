@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tool-use-dpo-negative-sources-artifacts"
+name = "tool-use-dpo-fixed-budget-report-artifacts"
 version = "0.1.0"
 description = "Artifact-level reproduction package for a fixed-budget tool-use DPO technical report."
 readme = "README.md"

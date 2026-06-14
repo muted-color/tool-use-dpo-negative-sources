@@ -12,8 +12,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 607,
-      "sha256": "c9a8c15ae259cc7791fe7273a8925b0ce879d3b5f57cd367278cb84042ff7b3d"
+      "bytes": 613,
+      "sha256": "56a64cc1f77536960b12b342689973ded28d37db6afd7f9cb0324bf87be3800f"
     },
     {
       "path": "DATA_LICENSE.md",
@@ -27,8 +27,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7422,
-      "sha256": "e248201bce6d9f663256eb5f155a25ff46be5b4e430f825bfe2b57fb9fde0cfa"
+      "bytes": 7740,
+      "sha256": "7a0dbfe795336526b0bbe0a77dc4ffff357cb519859dd064f765c3ef44e7df3f"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -342,8 +342,8 @@
     },
     {
       "path": "docs/evidence_map.md",
-      "bytes": 2939,
-      "sha256": "47b3e5451677e4a9a324da2bfd54175d01be6d4a03a462e70b4518e1a46d5ba2"
+      "bytes": 3019,
+      "sha256": "2622a2d539e49d46069644b2ca8fedd08d704ddbda34a511028c53bd4c752c1d"
     },
     {
       "path": "docs/model_license_table.md",
@@ -372,13 +372,13 @@
     },
     {
       "path": "docs/release_readiness.md",
-      "bytes": 2279,
-      "sha256": "ff7a7e80c65ada6242775707f0c829ae95ccec174a9f7f1ec7352daf69c01d48"
+      "bytes": 2457,
+      "sha256": "7cd8b421a490b4ef80dfc781613579f3bb86248f32db9b793b66bd73d89fce12"
     },
     {
       "path": "docs/reproduction.md",
-      "bytes": 3959,
-      "sha256": "7b42c229bc8605f345b75e09865e0e9ef5ae43cbf4e4199d90703d784355da34"
+      "bytes": 3966,
+      "sha256": "f9acdc1bb4f96d701a94d07cda2351f7dd40c029697c68eb408af003adc9775a"
     },
     {
       "path": "environment/requirements.txt",
@@ -412,8 +412,8 @@
     },
     {
       "path": "pyproject.toml",
-      "bytes": 470,
-      "sha256": "da10a6549009084707ed1fea6d0c52f9eab74c36cd694d8d264c126e6e7a281d"
+      "bytes": 473,
+      "sha256": "b881ddc82fad68a7329e8dc54b4375a4e3226beff83f5aed3d71dd0e8b69f438"
     },
     {
       "path": "results/aggregate/main_metrics_absolute.csv",

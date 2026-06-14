@@ -43,8 +43,11 @@ repository, not as a complete end-to-end training pipeline.
 
 ## Evidence Files
 
+- `README.md`: public entrypoint and evidence overview.
 - `docs/evidence_map.md`: public evidence names, artifact paths, trace IDs, and
   interpretation boundaries.
+- `docs/reproduction.md`: artifact-level reproduction commands and expected
+  outputs.
 - `configs/artifact_manifest.json`: file sizes and SHA-256 hashes for released
   artifacts.
 - `manifests/benchmark_manifest.yaml`: benchmark versions, slices, evaluator
@@ -52,5 +55,6 @@ repository, not as a complete end-to-end training pipeline.
 - `docs/paper_manifest_summary.md`: paper-ready evaluation surface summary.
 - `docs/contamination_overlap.md`: contamination and train-pool overlap scope.
 - `docs/redistribution_policy.md`: release boundary and source-specific policy.
-- `artifacts/stage8/data_sampling/`: fixed summary artifacts for the scoped
-  independent pair-pool data-sampling robustness replicate.
+- Supporting evidence artifact directories under `artifacts/`: fixed summaries
+  for appendix ablations, seed stability, coverage diagnostics, and pair-pool
+  robustness.
